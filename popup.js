@@ -114,8 +114,27 @@
     }
   }
 
+  function renderPopupEmptyHtml () {
+    var headerHtml = '<div class="modal-header"><h3><a href="http://tos-dr.info/' +
+      '" target="_blank"><img src="images/tosdr-logo-32.png" alt="" class="pull-left" />' +
+      '</a></h3></div>';
+    var bodyHtml = '<div class="modal-body">' +
+      '<p><strong>Not rated, yet.</strong><p>' +
+      '<p>Write an email to <a href="mailto:tosdr@googlegroups.com">tosdr@googlegroups.com</a> with a link to the terms,' +
+      ' a small quote from the terms about the point you‘re making and let us know if you think it‘s a good or a bad point.' +
+      ' It‘s better to do one email thread by topic, rather than one email per service. For more details, read on!</p>' +
+      '</div>';
+    document.getElementById('page').innerHTML = headerHtml + bodyHtml;
+  }
+
   safari.application.addEventListener("popover", function (event) {
-    renderPopup(Tosdr.getService(event.currentTarget.activeBrowserWindow.activeTab.url).name);
+    var service = Tosdr.getService(event.currentTarget.activeBrowserWindow.activeTab.url);
+    if (service) {
+      renderPopup(service.name);
+    }
+    else {
+      renderPopupEmptyHtml();
+    }
   }, true);
 
   // Event delegation for links as they don't seem to function as they are.
