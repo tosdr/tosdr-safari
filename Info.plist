@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>xMartin</string>
+	<string>Terms of Service; Didn't Read</string>
 	<key>Builder Version</key>
 	<string>7536.25</string>
 	<key>CFBundleDisplayName</key>
-	<string>ToS Checker</string>
+	<string>Terms of Service; Didn't Read</string>
 	<key>CFBundleIdentifier</key>
-	<string>de.xmartin.tos-checker-safari</string>
+	<string>org.didnotread.didnotread</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
