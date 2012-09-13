@@ -1,0 +1,23 @@
+ #page { width: 100%;padding: 0; margin: 1 2 1 2;}
+
+body {padding-left: 1px; padding-right: 1px; overflow:hidden;}
+
+        
+
+.tosdr-rating label{ width:90%; margin-right: auto auto auto auto; vertical-align:middle; text-align: center; }
+
+a:before:{ content:"-> "}
+        
+ .modal-header{ margin: 0 0 0 0;}
+ small{ text-align:right; }
+        
+body{ overflow: hidden;}
+.modal-body { padding: 5px 15px 10px 15px; overflow: hidden; }
+
+h3{height:36px; padding-left:5px; font-size: 16px; line-height: 30px;}
+
+table { width: 100%;}
+.rating-cell { width: 50px;}
+.site-logo{ height:30px; padding-right: 5px;}
+
+p{ font-style: italic;}

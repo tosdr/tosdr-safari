@@ -20,11 +20,18 @@ function getTosButton (tab) {
 safari.application.addEventListener('navigate', function (event) {
   var service = Tosdr.getService(event.target.url);
   var button = getTosButton(event.target);
-  if (service && service.tosdr.rated) {
-    button.image = safari.extension.baseURI + service.tosdr.rated.toLowerCase() + '.png';
+  var popover = safari.extension.popovers.popover;
+  popover.contentWindow.currentService = service;
+  if (service) {
+    if (service.tosdr.rated) {
+      button.image = safari.extension.baseURI + service.tosdr.rated.toLowerCase() + '.png';
+    }
+    else {
+      button.image = safari.extension.baseURI + 'false.png';
+    }
   }
   else {
-    button.image = safari.extension.baseURI + 'false.png';
+    button.image = safari.extension.baseURI + 'logo.png';
   }
 });
 
