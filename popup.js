@@ -118,4 +118,19 @@
     renderPopup(Tosdr.getService(event.currentTarget.activeBrowserWindow.activeTab.url).name);
   }, true);
 
+  // Event delegation for links as they don't seem to function as they are.
+  document.addEventListener('click', function (event) {
+    var element = event.target;
+    function findTarget (element) {
+      if (element.tagName.toLowerCase() == 'a' && element.href) {
+        safari.application.openBrowserWindow().activeTab.url = element.href;
+        event.preventDefault();
+      }
+      else {
+        element.parentNode && findTarget(element.parentNode);
+      }
+    }
+    findTarget(element);
+  });
+
 })();
