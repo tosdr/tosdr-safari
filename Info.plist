@@ -41,7 +41,7 @@
 				<key>Identifier</key>
 				<string>tos button</string>
 				<key>Image</key>
-				<string>false.png</string>
+				<string>icons/none.png</string>
 				<key>Label</key>
 				<string>ToS Checker</string>
 				<key>Palette Label</key>

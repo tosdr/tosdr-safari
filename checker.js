@@ -24,14 +24,14 @@ safari.application.addEventListener('navigate', function (event) {
   popover.contentWindow.currentService = service;
   if (service) {
     if (service.tosdr.rated) {
-      button.image = safari.extension.baseURI + service.tosdr.rated.toLowerCase() + '.png';
+      button.image = safari.extension.baseURI + 'icons/' + service.tosdr.rated.toLowerCase() + '.png';
     }
     else {
-      button.image = safari.extension.baseURI + 'false.png';
+      button.image = safari.extension.baseURI + 'icons/false.png';
     }
   }
   else {
-    button.image = safari.extension.baseURI + 'logo.png';
+    button.image = safari.extension.baseURI + 'icons/none.png';
   }
 });
 
