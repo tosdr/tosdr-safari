@@ -7,9 +7,9 @@
 	<key>Builder Version</key>
 	<string>7536.25</string>
 	<key>CFBundleDisplayName</key>
-	<string>Terms of Service; Didn't Read</string>
+	<string>Terms of Service</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.didnotread.didnotread</string>
+	<string>info.tos-dr</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -43,7 +43,7 @@
 				<key>Image</key>
 				<string>icons/none.png</string>
 				<key>Label</key>
-				<string>ToS Checker</string>
+				<string>Terms of Service</string>
 				<key>Palette Label</key>
 				<string></string>
 				<key>Popover</key>
@@ -56,6 +56,8 @@
 		<key>Scripts</key>
 		<dict/>
 	</dict>
+	<key>Description</key>
+	<string>We are a user rights initiative to rate and label website terms &amp; privacy policies.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -68,7 +70,9 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://safariextension.tos-dr.info/update-manifest.plist</string>
 	<key>Website</key>
-	<string>http://tos-dr.info</string>
+	<string>http://tos-dr.info/</string>
 </dict>
 </plist>
