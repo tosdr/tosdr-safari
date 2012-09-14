@@ -83,7 +83,7 @@
   }
 
   function renderPopupHtml(name, longName, domain, verdict, ratingText, points, links) {
-    var headerHtml = '<div class="modal-header"><h3><a href="http://tos-dr.info/#' + name +
+    var headerHtml = '<div class="modal-header"><h3><a href="http://tos-dr.info/#' + name.toLowerCase() +
       '" target="_blank"><img src="images/tosdr-logo-32.png" alt="" class="pull-left" />' +
       '</a></h3></div>';
     var classHtml = '<div class="tosdr-rating"><label class="label ' + verdict + '">' +
