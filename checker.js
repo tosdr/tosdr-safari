@@ -34,9 +34,3 @@ safari.application.addEventListener('navigate', function (event) {
     button.image = safari.extension.baseURI + 'icons/none.png';
   }
 });
-
-safari.application.addEventListener("command", function (event) {
-  if (event.command == 'open tosdr site') {
-    safari.application.openBrowserWindow().activeTab.url = 'http://tos-dr.info';
-  }
-}, false);
