@@ -17,7 +17,7 @@ function getTosButton (tab) {
   }
 }
 
-safari.application.addEventListener('navigate', function (event) {
+function onNewUrl (event) {
   var service = Tosdr.getService(event.target.url);
   var button = getTosButton(event.target);
   var popover = safari.extension.popovers.popover;
@@ -33,4 +33,7 @@ safari.application.addEventListener('navigate', function (event) {
   else {
     button.image = safari.extension.baseURI + 'icons/none.png';
   }
-});
+}
+
+safari.application.addEventListener('navigate', onNewUrl);
+safari.application.addEventListener('activate', onNewUrl, true);
