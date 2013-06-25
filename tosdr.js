@@ -17,7 +17,7 @@ window.Tosdr = (function () {
   }
 
   function loadService (serviceName, serviceIndexData) {
-    ajax('http://tos-dr.info/services/' + serviceName + '.json', {
+    ajax('http://tosdr.org/services/' + serviceName + '.json', {
       success: function (service) {
         service.urlRegExp = new RegExp('https?://[^:]*' + service.url + '.*');
         service.points = serviceIndexData.points;
@@ -31,7 +31,7 @@ window.Tosdr = (function () {
     });
   }
 
-  ajax('http://tos-dr.info/index/services.json', {
+  ajax('http://tosdr.org/index/services.json', {
     success: function (servicesIndex) {
       for (var serviceName in servicesIndex) {
         loadService(serviceName, servicesIndex[serviceName]);

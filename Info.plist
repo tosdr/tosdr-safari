@@ -73,6 +73,6 @@
 	<key>Update Manifest URL</key>
 	<string>http://safariextension.tos-dr.info/update-manifest.plist</string>
 	<key>Website</key>
-	<string>http://tos-dr.info/</string>
+	<string>http://tosdr.org/</string>
 </dict>
 </plist>
