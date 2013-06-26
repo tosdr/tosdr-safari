@@ -17,22 +17,22 @@
   }
 
   function renderDataPoint(service, dataPointId) {
-    ajax('http://tos-dr.info/points/' + dataPointId + '.json', {
+    ajax('http://tosdr.org/points/' + dataPointId + '.json', {
       success: function (dataPoint) {
         var badge, icon, sign;
         if (dataPoint.tosdr.point == 'good') {
           badge = 'badge-success';
           icon = 'thumbs-up';
           sign = '+';
-        } else if (dataPoint.tosdr.point == 'mediocre') {
+        } else if (dataPoint.tosdr.point == 'bad') {
           badge = 'badge-warning';
           icon = 'thumbs-down';
           sign = '-';
-        } else if (dataPoint.tosdr.point == 'alert') {
+        } else if (dataPoint.tosdr.point == 'blocker') {
           badge = 'badge-important';
           icon = 'remove';
           sign = '×';
-        } else if (dataPoint.tosdr.point == 'not bad') {
+        } else if (dataPoint.tosdr.point == 'neutral') {
           badge = 'badge-neutral';
           icon = 'arrow-right';
           sign = '→';
@@ -83,7 +83,7 @@
   }
 
   function renderPopupHtml(name, longName, domain, verdict, ratingText, points, links) {
-    var headerHtml = '<div class="modal-header"><h3><a href="http://tos-dr.info/#' + name.toLowerCase() +
+    var headerHtml = '<div class="modal-header"><h3><a href="http://tosdr.org/#' + name.toLowerCase() +
       '" target="_blank"><img src="images/tosdr-logo-32.png" alt="" class="pull-left" />' +
       '</a></h3></div>';
     var classHtml = '<div class="tosdr-rating"><label class="label ' + verdict + '">' +
@@ -97,7 +97,7 @@
 
     // Add Links
     if (isEmpty(links)) {
-      bodyHtml += '<section><a href="http://tos-dr.info/get-involved.html" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Get Involved</a></section>';
+      bodyHtml += '<section><a href="http://tosdr.org/get-involved.html" class="btn" target="_blank"><i class="icon  icon-list-alt"></i> Get Involved</a></section>';
     } else {
       bodyHtml += '<section><h4>Read the Terms</h4><ul class="tosback2">';
       for (var i in links) {
@@ -115,7 +115,7 @@
   }
 
   function renderPopupEmptyHtml () {
-    var headerHtml = '<div class="modal-header"><h3><a href="http://tos-dr.info/' +
+    var headerHtml = '<div class="modal-header"><h3><a href="http://tosdr.org/' +
       '" target="_blank"><img src="images/tosdr-logo-32.png" alt="" class="pull-left" />' +
       '</a></h3></div>';
     var bodyHtml = '<div class="modal-body">' +
