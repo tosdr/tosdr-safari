@@ -10,11 +10,11 @@
        <key>Developer Identifier</key>
        <string>QEK9AG5ACM</string>
        <key>CFBundleVersion</key>
-       <string>1</string>
+       <string>2</string>
        <key>CFBundleShortVersionString</key>
-       <string>0.1</string>
+       <string>0.2</string>
        <key>URL</key>
-       <string>https://github.com/downloads/tosdr/tosdr-safari/didnotread-0.1.safariextz</string>
+       <string>http://tosdr.siarp.de/tosdr-0.2.safariextz</string>
      </dict>
    </array>
 </dict>
