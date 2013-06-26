@@ -11,4 +11,9 @@ showing an unintrusive icon in the toolbar. You can click on this
 icon to get summaries from the [Terms of Service; Didn't
 Read][tosdr] initiative.
 
+Get the extension
+[here](https://safariextension.tosdr.org)
+
+![screenshot](images/screenshot1.jpg)
+
 [tosdr]: http://tosdr.org
