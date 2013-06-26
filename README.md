@@ -14,6 +14,6 @@ Read][tosdr] initiative.
 Get the extension
 [here](https://safariextension.tosdr.org)
 
-![screenshot](images/screenshot1.jpg)
+![screenshot](images/screenshot1.png)
 
 [tosdr]: http://tosdr.org
