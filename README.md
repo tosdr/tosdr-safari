@@ -5,4 +5,5 @@ We aim to fix that. This extension informs you instantly of your
 rights online by showing terms and privacy policies ratings and
 summaries from the [Terms of Service; Didn't Read][tosdr] initiative.
 
-[tosdr]: (http://tosdr.org)
+
+[tosdr]: http://tosdr.org
