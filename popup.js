@@ -24,15 +24,15 @@
           badge = 'badge-success';
           icon = 'thumbs-up';
           sign = '+';
-        } else if (dataPoint.tosdr.point == 'mediocre') {
+        } else if (dataPoint.tosdr.point == 'bad') {
           badge = 'badge-warning';
           icon = 'thumbs-down';
           sign = '-';
-        } else if (dataPoint.tosdr.point == 'alert') {
+        } else if (dataPoint.tosdr.point == 'blocker') {
           badge = 'badge-important';
           icon = 'remove';
           sign = '×';
-        } else if (dataPoint.tosdr.point == 'not bad') {
+        } else if (dataPoint.tosdr.point == 'neutral') {
           badge = 'badge-neutral';
           icon = 'arrow-right';
           sign = '→';
