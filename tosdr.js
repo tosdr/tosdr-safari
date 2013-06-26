@@ -19,7 +19,11 @@ window.Tosdr = (function () {
   function loadService (serviceName, serviceIndexData) {
     ajax('http://tosdr.org/services/' + serviceName + '.json', {
       success: function (service) {
-        service.urlRegExp = new RegExp('https?://[^:]*' + service.url + '.*');
+        if (!service.url) {
+          console.log(serviceName+' has no service url');
+          return;
+        }
+        service.urlRegExp = createRegExpForServiceUrl(service.url);
         service.points = serviceIndexData.points;
         service.links = serviceIndexData.links;
         if (!service.tosdr) {
@@ -29,6 +33,14 @@ window.Tosdr = (function () {
         localStorage.setItem(serviceName, JSON.stringify(service));
       }
     });
+  }
+
+  function createRegExpForServiceUrl (serviceUrl) {
+    if (/^http/.exec(serviceUrl)) {
+      return new RegExp(serviceUrl + '.*');
+    } else {
+      return new RegExp('https?://[^:/]*\\b' + serviceUrl + '.*');
+    }
   }
 
   ajax('http://tosdr.org/index/services.json', {
