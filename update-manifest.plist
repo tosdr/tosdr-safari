@@ -10,11 +10,11 @@
        <key>Developer Identifier</key>
        <string>QEK9AG5ACM</string>
        <key>CFBundleVersion</key>
-       <string>3</string>
+       <string>4</string>
        <key>CFBundleShortVersionString</key>
-       <string>0.2.1</string>
+       <string>0.2.2</string>
        <key>URL</key>
-       <string>http://safariextension.tos-dr.info/downloads/tosdr.safariextz</string>
+       <string>http://safariextension.tosdr.org/downloads/tosdr.safariextz</string>
      </dict>
    </array>
 </dict>
