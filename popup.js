@@ -45,11 +45,11 @@
           '<div class="' + dataPoint.tosdr.point + '"><h5><span class="badge ' + badge +
           '" title="' + dataPoint.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' +
           sign + '</i></span> <a target="_blank" href="' + dataPoint.discussion + '">' +
-          dataPoint.name + '</a></h5><p>' + dataPoint.tosdr.tldr + '</p></div></li>';
+          dataPoint.title + '</a></h5><p>' + dataPoint.tosdr.tldr + '</p></div></li>';
         document.getElementById('popup-point-' + service + '-' + dataPointId).innerHTML =
           '<div class="' + dataPoint.tosdr.point + '"><h5><span class="badge ' + badge +
           '" title="' + dataPoint.tosdr.point + '"><i class="icon-' + icon + ' icon-white">' +
-          sign + '</i></span> ' + dataPoint.name + ' <a href="' + dataPoint.discussion +
+          sign + '</i></span> ' + dataPoint.title + ' <a href="' + dataPoint.discussion +
           '" target="_blank" class="label context">Discussion</a> <!--a href="' + dataPoint.source.terms +
           '" class="label context" target="_blank">Terms</a--></h5><p>' + dataPoint.tosdr.tldr + '</p></div></li>';
       }
