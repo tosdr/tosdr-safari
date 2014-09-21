@@ -25,6 +25,7 @@ function notify(title, body) {
   });
 
   notification.onclick = function() {
+    safari.application.activeBrowserWindow.openTab().url = 'http://tosdr.org/#' + title;
     this.close();
   }
 }
