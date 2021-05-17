@@ -17,6 +17,24 @@ function getTosButton (tab) {
   }
 }
 
+function notify(title, body) {
+  var notification = new Notification(title, {
+    'body': body,
+    // prevent duplicate notifications
+    'tag' : 'tosdr-' + title
+  });
+
+  notification.onclick = function() {
+    safari.application.activeBrowserWindow.openTab().url = 'http://tosdr.org/#' + title;
+    this.close();
+  }
+}
+
+RATING_TEXT = {
+    "D": "The terms of service are very uneven or there are some important issues that need your attention.",
+    "E": "The terms of service raise very serious concerns."
+};
+
 function onNewUrl (event) {
   var service = Tosdr.getService(event.target.url);
   var button = getTosButton(event.target);
@@ -25,6 +43,10 @@ function onNewUrl (event) {
   if (service) {
     if (service.tosdr.rated) {
       button.image = safari.extension.baseURI + 'icons/' + service.tosdr.rated.toLowerCase() + '.png';
+      // show notification in case of bad rating
+      if (service.tosdr.rated == 'D' || service.tosdr.rated == 'E') {
+          notify(service.name, RATING_TEXT[service.tosdr.rated]);
+      }
     }
     else {
       button.image = safari.extension.baseURI + 'icons/false.png';
